@@ -1,7 +1,12 @@
 import React from 'react';
+import GlobalStyle from './styles/global';
+import Container from './components/container/Container';
 
-function App() {
-  return <h1>JAMADEU</h1>;
-}
+const App = () => (
+  <>
+    <Container />
+    <GlobalStyle />
+  </>
+);
 
 export default App;
