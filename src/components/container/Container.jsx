@@ -31,7 +31,7 @@ const Container = () => {
           <a href="mailto:jean.amadeu2@gmail.com">
             <GoMail />
           </a>
-          <a href="www.linkedin.com/in/jeanamadeu">
+          <a href="https://www.linkedin.com/in/jeanamadeu">
             <FaLinkedinIn />
           </a>
         </nav>
@@ -39,10 +39,11 @@ const Container = () => {
       <Repositories>
         <h1>Projetos</h1>
         {repositories.map((repo) => (
-          <div key={repo.id}>
-            <a href={repo.html_url}>{repo.name}</a>
-            {repo.description && <p>{repo.description}</p>}
-          </div>
+          <a key={repo.id} href={repo.html_url}>
+            {repo.full_name}
+            {repo.description && <span>{repo.description}</span>}
+            <p>{repo.language}</p>
+          </a>
         ))}
       </Repositories>
     </>
